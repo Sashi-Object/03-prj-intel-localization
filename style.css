@@ -52,7 +52,7 @@ header p {
 }
 
 /* ===== Timeline Cards Section ===== */
-section {
+section.timeline {
   padding: 40px 20px;
   margin: 0 auto;
   display: flex;
@@ -63,7 +63,7 @@ section {
 }
 
 /* Individual timeline card styling */
-section > div {
+section.timeline > div {
   flex: 0 0 300px;
   background-color: white;
   border-radius: 12px;
@@ -76,7 +76,7 @@ section > div {
 }
 
 /* Hover effect for cards - reveal more details */
-section > div:hover {
+section.timeline > div:hover {
   transform: translateY(-8px);
   box-shadow: 0 12px 24px rgba(0, 113, 197, 0.25);
   border-left-color: #004B8A;
@@ -84,7 +84,7 @@ section > div:hover {
 }
 
 /* Year heading in cards */
-section > div h2 {
+section.timeline > div h2 {
   font-size: 28px;
   font-weight: 700;
   color: #0071C5;
@@ -92,7 +92,7 @@ section > div h2 {
 }
 
 /* Card title */
-section > div h3 {
+section.timeline > div h3 {
   font-size: 20px;
   font-weight: 600;
   color: #333;
@@ -100,7 +100,7 @@ section > div h3 {
 }
 
 /* Card images - responsive sizing */
-section > div img {
+section.timeline > div img {
   width: 100%;
   height: 200px;
   object-fit: cover;
@@ -110,7 +110,7 @@ section > div img {
 }
 
 /* Card description text — hidden by default, revealed on hover (overlay) */
-section > div p {
+section.timeline > div p {
   font-size: 14px;
   line-height: 1.6;
   margin: 0;
@@ -132,7 +132,7 @@ section > div p {
 
 /* Reveal paragraph on hover for pointer devices */
 @media (hover: hover) and (pointer: fine) {
-  section > div:hover p {
+  section.timeline > div:hover p {
     transform: translateY(0);
     opacity: 1;
     pointer-events: auto;
@@ -141,7 +141,7 @@ section > div p {
 
 /* On touch devices and small screens, show details inline (no hover) */
 @media (max-width: 768px), (hover: none) {
-  section > div p {
+  section.timeline > div p {
     position: static;
     transform: none;
     opacity: 1;
@@ -167,19 +167,19 @@ body > p {
 /* ===== Responsive Design - Mobile Screens ===== */
 @media (max-width: 768px) {
   /* Stack cards vertically on mobile */
-  section {
+  section.timeline {
     padding: 30px 15px;
     gap: 30px;
   }
   
-  section > div {
+  section.timeline > div {
     flex: 0 0 100%;
     max-width: 500px;
     padding: 20px;
   }
   
   /* Smaller images on mobile devices */
-  section > div img {
+  section.timeline > div img {
     max-height: 180px;
     object-fit: cover;
   }
@@ -205,12 +205,12 @@ body > p {
 
 /* ===== Responsive Design - Tablet Screens ===== */
 @media (min-width: 769px) and (max-width: 1024px) {
-  section > div {
+  section.timeline > div {
     flex: 0 0 280px;
   }
   
   /* Medium-sized images on tablets */
-  section > div img {
+  section.timeline > div img {
     max-height: 200px;
     object-fit: cover;
   }
@@ -223,18 +223,18 @@ body > p {
 /* ===== Responsive Design - Large Screens ===== */
 @media (min-width: 1025px) {
   /* Horizontal scroll layout on large screens */
-  section {
+  section.timeline {
     max-width: 100%;
     overflow-x: auto;
     scroll-behavior: smooth;
     flex-wrap: nowrap;
   }
-  section > div {
+  section.timeline > div {
     flex: 0 0 320px;
   }
   
   /* Larger images on desktop screens */
-  section > div img {
+  section.timeline > div img {
     max-height: 220px;
     object-fit: cover;
   }
@@ -256,6 +256,7 @@ body > p {
   background: rgba(255, 255, 255, 0.15);
   color: #0071C5; /* Intel blue text for input */
   border: 1px solid #0071C5;
+  text-align: center; /* center placeholder and entered text */
 }
 
 .newsletter-form .form-control::placeholder {
@@ -297,6 +298,56 @@ body > p {
   color: #0071C5;
   font-weight: 600;
   text-decoration: none;
+}
+
+/* newsletter form layout: center on medium+ screens, left-align on small */
+.newsletter-form {
+  text-align: center;
+}
+@media (max-width: 767px) {
+  .newsletter-form {
+    text-align: left;
+  }
+}
+
+/* footer: keep centered on large, shift left on phones; nav wraps */
+footer .container {
+  text-align: center;
+}
+footer nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem; /* space out links */
+}
+@media (max-width: 767px) {
+  footer .container {
+    text-align: left;
+  }
+  footer nav {
+    justify-content: flex-start;
+  }
+}
+
+/* remove hover/transform effect from feature cards (the timeline cards keep theirs) */
+.feature-card:hover {
+  transform: none !important;
+  box-shadow: none !important;
+  background: transparent !important; /* keep original background */
+  border-left-color: #0071C5;
+}
+
+/* center the content of feature cards on medium and larger screens */
+.feature-card {
+  text-align: center;
+  padding: 24px; /* extra whitespace inside each card */
+}
+
+/* stack text left on small screens for better readability */
+@media (max-width: 767px) {
+  .feature-card {
+    text-align: left;
+  }
 }
 
 .feature-link:hover,
