@@ -243,3 +243,63 @@ body > p {
     font-size: 48px;
   }
 }
+
+/* ===== Newsletter form styling ===== */
+.newsletter-form {
+  /* White-ish background for contrast on dark page */
+  background: rgba(255, 255, 255, 0.1);
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.newsletter-form .form-control {
+  background: rgba(255, 255, 255, 0.15);
+  color: #0071C5; /* Intel blue text for input */
+  border: 1px solid #0071C5;
+}
+
+.newsletter-form .form-control::placeholder {
+  color: #0071C5; /* match input text color */
+}
+
+/* label color inside newsletter form */
+.newsletter-form .newsletter-label {
+  color: #0071C5;
+  font-weight: 600;
+  margin-bottom: 4px;
+  display: block;
+}
+
+.newsletter-form .form-control:focus {
+  background: rgba(255, 255, 255, 0.2);
+  color: #000;
+  box-shadow: 0 0 0 0.2rem rgba(0, 113, 197, 0.4);
+}
+
+.newsletter-form .btn-primary {
+  background-color: #0071C5;
+  border-color: #0071C5;
+  color: #fff;
+  display: block;
+  margin: 0 auto; /* center the button horizontally */
+}
+
+.newsletter-form .btn-primary:hover,
+.newsletter-form .btn-primary:focus {
+  background-color: #005a9e;
+  border-color: #005a9e;
+}
+
+/* feature column link styling */
+.feature-link {
+  display: inline-block;
+  margin-top: 8px;
+  color: #0071C5;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.feature-link:hover,
+.feature-link:focus {
+  text-decoration: underline;
+}

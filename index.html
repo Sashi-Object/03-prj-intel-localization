@@ -1,10 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="rtl">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Intel: Sustainability Through the Ages</title>
   <link rel="stylesheet" href="style.css" />
+  <!-- Bootstrap RTL for grid and utilities -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css" integrity="sha384-+qdLaYjn8p6TVYI4xZ4/1G+1AoaRrT2e5eVnY8Zf3z1IfYk6UZmK6L6I5mgWj0Dj" crossorigin="anonymous" />
+  <!-- Bootstrap Icons (for column headings) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
 </head>
 <body>
 
@@ -12,7 +16,7 @@
   <header>
     <div>
       <!-- Ask Copilot to teach you about `.svg`. 🙂 You'll need to resize the logo with CSS. -->
-      <img src="img/intel-header-logo.svg" alt="Intel Logo" />
+      <img src="img/intel-header-logo.svg" alt="Intel corporate logo" />
       <!-- Main Heading -->
       <h1>
         Intel's Sustainability Timeline
@@ -35,7 +39,7 @@
       <h2>1968</h2>
       <h3>Intel Founded</h3>
       <!-- Add image -->
-      <img src="img/1.jpg" alt="Intel Founded" />
+      <img src="img/1.jpg" alt="Historical photo representing the founding of Intel in 1968" />
       <p>
         Robert Noyce and Gordon Moore rename the newly formed company 
         NM Electronics to Intel Corporation, laying the foundation for 
@@ -48,7 +52,7 @@
       <h2>1971</h2>
       <h3>First Microprocessor</h3>
       <!-- Add image -->
-       <img src="img/2.jpg" alt="Intel 4004 Microprocessor" />
+       <img src="img/2.jpg" alt="Close-up of the Intel 4004 microprocessor, the first commercial microprocessor" />
       <p>
         Intel debuts the 4004, the world's first commercial microprocessor, 
         igniting the microprocessor revolution and propelling the future 
@@ -61,7 +65,7 @@
       <h2>1978</h2>
       <h3>8086 Processor</h3>
       <!-- Add image -->
-      <img src="img/3.jpg" alt="Intel 8086 Processor" />
+      <img src="img/3.jpg" alt="Intel 8086 processor chip, key to x86 architecture" />
       <p>
         Launch of the 8086 processor, establishing the x86 architecture 
         that drives countless PCs and servers in the modern era.
@@ -73,7 +77,7 @@
       <h2>1985</h2>
       <h3>386 Processor</h3>
       <!-- Add image -->
-      <img src="img/4.jpg" alt="Intel 386 Processor" />
+      <img src="img/4.jpg" alt="Intel 386 processor used in early PCs" />
       <p>
         Intel introduces the 386 processor with 32-bit architecture, 
         ushering in a new era of performance and multitasking for 
@@ -86,7 +90,7 @@
       <h2>2006</h2>
       <h3>Peak GHG Emissions</h3>
       <!-- Add image -->
-      <img src="img/ghg.png" alt="Intel GHG Emissions" />
+      <img src="img/ghg.png" alt="Graph showing Intel's greenhouse gas emissions peak in 2006" />
       <p>
         This year marks Intel's highest annual greenhouse gas emissions 
         for operations. Over subsequent years, Intel invests heavily in 
@@ -100,7 +104,7 @@
       <h2>2020</h2>
       <h3>RISE Strategy</h3>
       <!-- Add image -->
-      <img src="img/rise.png" alt="Intel RISE Strategy" />
+      <img src="img/rise.png" alt="Logo for Intel's RISE sustainability strategy" />
       <p>
         Intel launches its RISE (Responsible, Inclusive, Sustainable, 
         Enabling) strategy and 2030 goals, aiming to drive industry-wide 
@@ -113,7 +117,7 @@
       <h2>2022</h2>
       <h3>Net-Zero By 2040</h3>
       <!-- Add image -->
-      <img src="img/2040.png" alt="Intel Net-Zero Commitment" />
+      <img src="img/2040.png" alt="Graphic announcing Intel's net-zero emissions goal by 2040" />
       <p>
         Intel announces its commitment to achieve net-zero greenhouse 
         gas emissions (Scope 1 and 2) across its global operations 
@@ -126,7 +130,7 @@
       <h2>2023</h2>
       <h3>Renewable Electricity</h3>
       <!-- Add image -->
-      <img src="img/electric.png" alt="Intel Renewable Electricity" />
+      <img src="img/electric.png" alt="Icon representing Intel achieving 99% renewable electricity" />
       <p>
         The company achieves 99% renewable electricity usage worldwide, 
         helping to drastically lower carbon emissions and driving progress 
@@ -139,7 +143,7 @@
       <h2>2024</h2>
       <h3>Sustainability Summit</h3>
       <!-- Add image -->
-      <img src="img/summit.png" alt="Intel Sustainability Summit" />
+      <img src="img/summit.png" alt="Illustration for Intel's 2024 sustainability summit" />
       <p>
         Intel hosts its first Sustainability Summit, uniting suppliers, 
         government officials, and industry leaders to collaborate on 
@@ -148,5 +152,64 @@
     </div>
   </section>
   <p>Scroll to view timeline | Hover over cards to learn more!</p>
+
+  <!-- three‑column grid and newsletter form -->
+  <section class="container my-5">
+    <div class="row">
+      <div class="col-12 col-md-4 mb-4 text-dark">
+        <h4><i class="bi bi-gear-fill me-2"></i>Feature One</h4>
+        <p>Some brief text describing the first feature or message.</p>
+        <a href="#" class="feature-link">Learn More</a>
+      </div>
+
+      <div class="col-12 col-md-4 mb-4 text-dark">
+        <h4><i class="bi bi-lightning-fill me-2"></i>Feature Two</h4>
+        <p>More copy for the second column – replace with whatever you like.</p>
+        <a href="#" class="feature-link">Learn More</a>
+      </div>
+
+      <div class="col-12 col-md-4 mb-4 text-dark">
+        <h4><i class="bi bi-globe2 me-2"></i>Feature Three</h4>
+        <p>Third column content goes here; it will sit beside the others on wider screens.</p>
+        <a href="#" class="feature-link">Learn More</a>
+      </div>
+    </div>
+
+    <div class="row mt-4">
+      <div class="col-12">
+        <form class="row g-2 align-items-center newsletter-form">
+          <div class="col-12 text-center mb-2">
+            <strong>Join our newsletter</strong>
+          </div>
+          <div class="col-auto">
+            <label for="newsletterEmail" class="form-label newsletter-label">Email</label>
+            <input type="email"
+                   class="form-control"
+                   id="newsletterEmail"
+                   placeholder="you@example.com"
+                   required>
+          </div>
+          <div class="col-auto">
+            <button type="submit" class="btn btn-primary">Subscribe</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- footer -->
+  <footer class="bg-dark text-light py-4">
+    <div class="container text-center">
+      <p class="mb-2">&copy; 2024 Intel Corporation. All rights reserved.</p>
+      <nav>
+        <a href="#" class="text-light me-3">Privacy</a>
+        <a href="#" class="text-light me-3">Terms</a>
+        <a href="#" class="text-light">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- optional Bootstrap JS bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+AMvyTG2xV4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 </body>
 </html>
