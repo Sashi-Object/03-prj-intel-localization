@@ -1,0 +1,245 @@
+/* ===== Global Styles ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body background color - dark with Intel blue accent */
+body {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #fff;
+  min-height: 100vh;
+}
+
+/* ===== Header / Hero Section ===== */
+header {
+  background-color: #0f1419;
+  padding: 60px 20px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 113, 197, 0.2);
+  margin-bottom: 40px;
+}
+
+header div {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Intel logo styling */
+header img {
+  width: 80px;
+  height: auto;
+  margin-bottom: 30px;
+}
+
+/* Main heading - bold and friendly */
+header h1 {
+  font-size: 48px;
+  font-weight: 700;
+  color: #0071C5;
+  margin-bottom: 20px;
+  letter-spacing: -0.5px;
+}
+
+/* Subheading with subtle contrast */
+header p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #d0d0d0;
+  font-weight: 500;
+}
+
+/* ===== Timeline Cards Section ===== */
+section {
+  padding: 40px 20px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  scroll-behavior: smooth;
+}
+
+/* Individual timeline card styling */
+section > div {
+  flex: 0 0 300px;
+  background-color: white;
+  border-radius: 12px;
+  padding: 30px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border-left: 5px solid #0071C5;
+  position: relative;
+}
+
+/* Hover effect for cards - reveal more details */
+section > div:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 113, 197, 0.25);
+  border-left-color: #004B8A;
+  background: linear-gradient(135deg, #ffffff 0%, #f0f8ff 100%);
+}
+
+/* Year heading in cards */
+section > div h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #0071C5;
+  margin-bottom: 10px;
+}
+
+/* Card title */
+section > div h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+/* Card images - responsive sizing */
+section > div img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  display: block;
+}
+
+/* Card description text — hidden by default, revealed on hover (overlay) */
+section > div p {
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0;
+  background: rgba(0, 0, 0, 0.95);
+  color: #fff;
+  padding: 16px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  transform: translateY(100%);
+  opacity: 0;
+  transition: transform 0.28s ease, opacity 0.28s ease;
+  pointer-events: none;
+  font-weight: 400;
+}
+
+/* Reveal paragraph on hover for pointer devices */
+@media (hover: hover) and (pointer: fine) {
+  section > div:hover p {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
+/* On touch devices and small screens, show details inline (no hover) */
+@media (max-width: 768px), (hover: none) {
+  section > div p {
+    position: static;
+    transform: none;
+    opacity: 1;
+    background: transparent;
+    color: #666;
+    padding: 0;
+    border-radius: 0;
+    margin-top: 12px;
+    pointer-events: auto;
+  }
+}
+
+/* Instruction text at the bottom */
+body > p {
+  text-align: center;
+  color: #e0e0e0;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+/* ===== Responsive Design - Mobile Screens ===== */
+@media (max-width: 768px) {
+  /* Stack cards vertically on mobile */
+  section {
+    padding: 30px 15px;
+    gap: 30px;
+  }
+  
+  section > div {
+    flex: 0 0 100%;
+    max-width: 500px;
+    padding: 20px;
+  }
+  
+  /* Smaller images on mobile devices */
+  section > div img {
+    max-height: 180px;
+    object-fit: cover;
+  }
+  
+  /* Adjust header for smaller screens */
+  header {
+    padding: 40px 15px;
+  }
+  
+  header h1 {
+    font-size: 32px;
+    margin-bottom: 15px;
+  }
+  
+  header p {
+    font-size: 16px;
+  }
+  
+  header img {
+    width: 60px;
+  }
+}
+
+/* ===== Responsive Design - Tablet Screens ===== */
+@media (min-width: 769px) and (max-width: 1024px) {
+  section > div {
+    flex: 0 0 280px;
+  }
+  
+  /* Medium-sized images on tablets */
+  section > div img {
+    max-height: 200px;
+    object-fit: cover;
+  }
+  
+  header h1 {
+    font-size: 40px;
+  }
+}
+
+/* ===== Responsive Design - Large Screens ===== */
+@media (min-width: 1025px) {
+  /* Horizontal scroll layout on large screens */
+  section {
+    max-width: 100%;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    flex-wrap: nowrap;
+  }
+  section > div {
+    flex: 0 0 320px;
+  }
+  
+  /* Larger images on desktop screens */
+  section > div img {
+    max-height: 220px;
+    object-fit: cover;
+  }
+  
+  header h1 {
+    font-size: 48px;
+  }
+}
